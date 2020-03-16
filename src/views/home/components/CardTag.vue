@@ -1,14 +1,14 @@
 <template>
   <el-card :body-style="{ padding: '8px 18px' }">
     <div slot="header" class="me-tag-header">
-      <span>最热标签</span>
+      <span class="left">最热标签</span>
       <a @click="moreTags" class="me-pull-right me-tag-more">查看全部</a>
     </div>
 
     <ul class="me-tag-list">
       <li class="me-tag-item" v-for="t in tags" :key="t.id">
         <!--type="primary"-->
-        <el-button @click="tag(t.id)" size="mini" type="primary" round plain>{{t.tagname}}</el-button>
+        <el-button @click="tag(t.id)" size="mini" type="primary" round plain>{{t.name}}</el-button>
       </li>
     </ul>
   </el-card>
@@ -35,13 +35,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped >
   .me-tag-header {
     font-weight: 600;
   }
   .me-tag-more {
     font-size: 14px;
     color: #78b6f7;
+    float: right;
+  }
+  .me-tag-more :hover {
+
   }
   .me-tag-list {
     list-style-type: none;

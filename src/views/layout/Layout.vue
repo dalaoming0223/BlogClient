@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-header></v-header>
+  <div class="layout">
+    <v-header class="v-header"></v-header>
     <v-main></v-main>
     <v-footer class="blog-footer"></v-footer>
   </div>
@@ -20,6 +20,15 @@ export default {
 </script>
 
 <style lang="less">
+  // .layout {
+  //   margin: 0;
+  // }
+  .v-header {
+    position: fixed;
+    width: 80%;
+    z-index: 100;
+    top: 0;
+  }
   .blog-footer {
       height: 20px;
       color: aquamarine;

@@ -32,6 +32,17 @@ const router = new VueRouter({
         }
       ]
 
+    },
+    {
+      path: '/tag',
+      component: Layout,
+      children: [
+        {
+          path: 'all',
+          component: () => import('@/views/tag/Tag.vue')
+
+        }
+      ]
     }
   ]
 })

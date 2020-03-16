@@ -3,12 +3,12 @@
     <div class="nav">
       <div class="nav-left">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-          <el-menu-item v-show="index>0" v-for="(item ,index) in itemList" v-bind:index="item.url" :key="item.id">
+          <el-menu-item v-show="index>0" v-for="(item ,index) in itemList" :index="item.url" :key="item.id">
             {{item.title}}
           </el-menu-item>
         </el-menu>
       </div>
-      <div class="nav-middle">
+      <!-- <div class="nav-middle">
         <el-input v-model="searchInput" clearable placeholder="搜索内容" @keyup.enter.native="onEnterSearch"
           prefix-icon="el-icon-search"></el-input>
       </div>
@@ -22,7 +22,7 @@
             <span :class="registerClass">注册</span>
           </router-link>
         </div>
-      </template>
+      </template> -->
       <template>
         <div class="nav-right">
           <el-button type="mini" class="nav-icon notification" @click="getNotification">
@@ -54,25 +54,26 @@ export default {
         { title: '', url: '' },
         { title: '首页', url: '/index' },
         { title: '简历', url: '/post/index' },
-        { title: '归档', url: '/draft/new' }
+        { title: '标签', url: '/tag/all' },
+        { title: '写文章', url: '/draft/new' }
       ]
     }
   },
   created () {
-    this.checkLogin()
+    // this.checkLogin()
   },
   computed: {
     // ...mapGetters([
     //   'isLogin'
     // ]),
 
-    // loginClass () {
-    //   return ['login', this.$route.path === '/auth/login' ? 'active' : '']
-    // },
+    loginClass () {
+      return ['login', this.$route.path === '/auth/login' ? 'active' : '']
+    },
 
-    // registerClass () {
-    //   return ['register', this.$route.path === '/auth/register' ? 'active' : '']
-    // },
+    registerClass () {
+      return ['register', this.$route.path === '/auth/register' ? 'active' : '']
+    },
 
     activeIndex () {
       for (const i of this.itemList.slice(1)) {
@@ -134,7 +135,7 @@ export default {
 
     .nav-left {
       margin: 0 1%;
-      flex: 1;
+      flex: 2;
     }
 
     .nav-middle {

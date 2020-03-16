@@ -3,193 +3,28 @@
     <div class="panel"></div>
     <div class="article-main">
       <section class="user-info">
-        <h3>wenzhang</h3>
+        <h3>{{title}}</h3>
         <span>
-        <p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-<p>Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
-
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为</p>
-
+        发布于{{friendlyDate(createdAt)}}
       </span>
       </section>
       <section class="article" v-html="markdown"></section>
-      <section>
-        pinglunxi
-      </section>
+      <!-- <section>
+        <v-comments
+          :blogId="blogId"
+          :blogComments="blogComments"
+          @update="updateComments"
+          @changeCommentsPage="changeCommentsPage">
+        </v-comments>
+      </section> -->
     </div>
     <div class="anchor"></div>
   </div>
 </template>
 
 <script>
-// import marked from 'marked'
-// import blog from '@/api/blog'
+import marked from 'marked'
+import blog from '@/services/blog'
 // import comment from '@/api/comment'
 // import VComments from '../comment/index.vue'
 
@@ -206,27 +41,30 @@ export default {
       createdAt: '',
       blogComments: {}
     }
+  },
+
+  created () {
+    console.log('this.$route.params.blogId:', this.$route.params.blogId)
+    this.blogId = this.$route.params.blogId
+
+    blog.getBlogDetail({ blogId: this.blogId }).then(res => {
+      console.log('返回的数据为', res)
+      this.title = res.data.data.title
+      this.rawContent = res.data.data.content
+      this.createdAt = res.data.data.created_at
+      this.user = res.data.data.user
+    })
+
+    // comment.getCommentsByBlogId({ blogId: this.blogId }).then(res => {
+    //   this.blogComments = res.data
+    // })
+  },
+
+  computed: {
+    markdown () {
+      return marked(this.rawContent)
+    }
   }
-
-  // created () {
-  //   this.blogId = this.$route.params.blogId
-  //   blog.getBlogDetail({ blogId: this.blogId }).then(res => {
-  //     this.title = res.data.title
-  //     this.rawContent = res.data.content
-  //     this.createdAt = res.data.created_at
-  //     this.user = res.data.user
-  //   })
-
-  //   comment.getCommentsByBlogId({ blogId: this.blogId }).then(res => {
-  //     this.blogComments = res.data
-  //   })
-  // },
-
-  // computed: {
-  //   markdown () {
-  //     return marked(this.rawContent)
-  //   }
-  // },
 
   // methods: {
   //   async updateComments () {
@@ -250,4 +88,65 @@ export default {
 </script>
 
 <style lang="less">
+  @import "~@/assets/base.less";
+  @import "~@/assets/article.less";
+  #article {
+    height: 100%;
+    margin: 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .panel{
+      width: 40px;
+      margin:  0 10px;
+    }
+
+    .article-main{
+      flex: 1;
+    }
+
+    .user-info {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ebebeb;
+
+      //.avatar {
+      //  grid-column: 1;
+      //  grid-row: 1 / span 2;
+      //
+      //  width: 60px;
+      //  height: 60px;
+      //  border-radius: 50%;
+      //}
+
+      h3 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 5px 0;
+      }
+
+      span {
+        text-align: right;
+        grid-column: 2;
+        grid-row: 1;
+        margin: 5px 0;
+        font-size: 15px;
+        color: @textLighterColor;
+
+        a {
+          color: @themeColor;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .article {
+      padding: 30px 0;
+    }
+
+  }
 </style>
