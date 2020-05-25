@@ -6,19 +6,14 @@
 
 <script>
 export default {
-  name: 'app',
-  components: {
-  }
+  name: 'app'
 }
 </script>
 
-<style>
+<style lang="less">
 @import "~@/assets/common.less";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    width: 100vw;//css3新单位，viewpoint width的缩写，视窗宽度，1vw等于视窗宽度的1%。举个例子：浏览器宽度1200px, 1 vw = 1200px/100 = 12 px。
+    height: 100vh;//css3新单位，viewpoint height的缩写，视窗高度，1vh等于视窗高度的1%。
 }
 </style>

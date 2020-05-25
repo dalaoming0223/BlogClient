@@ -2,16 +2,12 @@
   <footer>
     <a class="a-left" href="https://stuapps.me">https://stuapps.me </a>
     <a class="a-right" href="https://stuapps.com">https://stuapps.com</a>
-    <div class="a-left">
-      © dalaoming-博客 | 粤ICP备17101089
-    </div>
   </footer>
 </template>
 
 <style scoped>
   footer {
-    height: 200px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     color: #666;
     font-size: 15px;
     padding: 10px;
@@ -30,5 +26,4 @@
     float: right;
     text-decoration: none;
   }
-
 </style>

@@ -4,9 +4,16 @@
   </div>
 </template>
 
-<style lang="less" scoped>
+<script>
+export default {
+  name: 'vMain'
+}
+</script>
+
+<style scoped lang="less">
   @import "~@/assets/common.less";
   .page-main {
     background-color: @bgColor;
   }
+
 </style>

@@ -1,3 +1,9 @@
+const path = require('path')
+
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
+
 module.exports = {
   devServer: {
     proxy: { // 设置代理
@@ -10,5 +16,13 @@ module.exports = {
       }
     },
     disableHostCheck: true
+  },
+  configureWebpack: {
+    name: name,
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
   }
 }

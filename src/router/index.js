@@ -1,9 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Layout from '@/views/layout/Layout'
-Vue.use(VueRouter)
 
-const router = new VueRouter({
+Vue.use(Router)
+
+const router = new Router({
   routes: [
     {
       name: '首页',
@@ -19,28 +20,6 @@ const router = new VueRouter({
             title: '首页',
             isMenu: true
           }
-        }
-      ]
-    },
-    {
-      path: '/blog',
-      component: Layout,
-      children: [
-        {
-          path: ':blogId',
-          component: () => import('@/views/blog/Blog.vue')
-        }
-      ]
-
-    },
-    {
-      path: '/tag',
-      component: Layout,
-      children: [
-        {
-          path: 'all',
-          component: () => import('@/views/tag/Tag.vue')
-
         }
       ]
     }
