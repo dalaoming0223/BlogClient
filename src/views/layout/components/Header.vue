@@ -1,11 +1,51 @@
 <template>
   <header>
     <router-link to="/" class="title">My Blog</router-link>
+    <div class="nav">
+
+      <div class="nav-left">
+        <el-menu
+        ref="menu"
+        :default-active="activeIndex"
+        class="el-menu-demo"
+        background-color="#fff"
+        mode="horizontal"
+        style="border-bottom:0"
+        @select="handleSelect"
+        >
+          <el-menu-item v-for="item in itemList" :key="item.title">
+            {{item.title}}
+          </el-menu-item>
+        </el-menu>
+      </div>
+
+      <div class="nav-middle">
+        <el-input
+        v-model="searchInput"
+        clearable
+        placeholder="搜索内容"
+        >
+
+        </el-input>
+      </div>
+    </div>
   </header>
 </template>
 
 <script>
-
+export default {
+  data () {
+    return {
+      serchInput: '',
+      itemList: [
+        { title: '', url: '' },
+        { title: '首页', url: '/index' },
+        { title: '社区', url: '/post/index' },
+        { title: '写文章', url: '/editor/drafts/new' }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="less">

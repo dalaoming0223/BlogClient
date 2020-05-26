@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <a class="a-left" href="https://stuapps.me">https://stuapps.me </a>
-    <a class="a-right" href="https://stuapps.com">https://stuapps.com</a>
+    <a class="a-left" href="http://blog.studalaoming.club">我的blog</a>
+    <a class="a-right" href="http://blog.studalaoming.club">我的blog</a>
   </footer>
 </template>
 

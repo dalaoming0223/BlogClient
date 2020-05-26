@@ -1,4 +1,4 @@
-# self_vueweb
+# 类似掘金
 
 ## Project setup
 ```
