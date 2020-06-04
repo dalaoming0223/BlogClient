@@ -22,6 +22,19 @@ const router = new Router({
           }
         }
       ]
+    },
+    {
+      path: '/blog',
+      component: Layout,
+      children: [
+        {
+          path: ':uuid',
+          component: () => import('@/views/blog/Blog.vue'),
+          meta: {
+            isMenu: true
+          }
+        }
+      ]
     }
   ]
 })

@@ -24,10 +24,22 @@
         v-model="searchInput"
         clearable
         placeholder="搜索内容"
+        @keyup.enter.native="onEnterSearch"
+        prefix-icon="el-icon-search"
         >
-
         </el-input>
       </div>
+      <template>
+        <div class="nav-right">
+          <router-link to="/auth/login">
+            <span :class="loginClass">登录</span>
+          </router-link>
+          <span style="padding: 3px">/</span>
+          <router-link to="/auth/register">
+            <span :class="registerClass">注册</span>
+          </router-link>
+        </div>
+      </template>
     </div>
   </header>
 </template>

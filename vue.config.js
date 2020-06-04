@@ -17,15 +17,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: { // 设置代理
-      // '/api': {
-      //   target: 'http://www.xxxxx.com/',
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     '^/api': '/api'
-      //   }
-      // }
-    },
+    // proxy: { // 设置代理
+    //   '/api': {
+    //     target: 'http://www.xxxxx.com/',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': '/api'
+    //     }
+    //   }
+    // },
     disableHostCheck: true
   },
   configureWebpack: {
