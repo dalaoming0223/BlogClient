@@ -42,8 +42,9 @@ export default {
           })
           this.$router.push({ path: '/' })
         })
-        .catch(() => {
-          this.$message.error('注册失败')
+        .catch((err) => {
+          console.log('注册页面error：', err)
+          this.$message.error('注册失败:' + err)
         })
     }
   }

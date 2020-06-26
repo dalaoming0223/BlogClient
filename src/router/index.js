@@ -35,6 +35,28 @@ const router = new Router({
           }
         }
       ]
+    },
+    {
+      path: '/auth',
+      component: Layout,
+      children: [
+        {
+          path: 'register',
+          component: () => import('@/views/auth/Login.vue'),
+          meta: {
+            title: '注册',
+            isMenu: true
+          }
+        },
+        {
+          path: 'login',
+          component: () => import('@/views/auth/Register.vue'),
+          meta: {
+            title: '登录',
+            isMenu: true
+          }
+        }
+      ]
     }
   ]
 })

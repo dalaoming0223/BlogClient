@@ -29,23 +29,39 @@
         >
         </el-input>
       </div>
-      <template>
+      <template v-if="!isLogin">
         <div class="nav-right">
-          <router-link to="/auth/login">
+          <router-link to="/auth/register">
             <span :class="loginClass">登录</span>
           </router-link>
           <span style="padding: 3px">/</span>
-          <router-link to="/auth/register">
+          <router-link to="/auth/login">
             <span :class="registerClass">注册</span>
           </router-link>
         </div>
       </template>
+
+      <template v-if="isLogin">
+        <div class="nav-right">
+          <el-button type="mini" class="nav-icon notification" @click="getNotification">
+            <i class="el-icon-message-solid" style="font-size: 20px;"></i>
+          </el-button>
+          <v-user/>
+        </div>
+      </template>
+
     </div>
   </header>
 </template>
 
 <script>
+// import auth from '@/api/auth'
+import vUser from './user_tool'
+import { mapGetters, mapActions } from 'vuex'
 export default {
+  components: {
+    vUser
+  },
   data () {
     return {
       serchInput: '',
@@ -55,6 +71,48 @@ export default {
         { title: '社区', url: '/post/index' },
         { title: '写文章', url: '/editor/drafts/new' }
       ]
+    }
+  },
+  created () {
+    this.checkLogin()
+  },
+  computed: {
+    ...mapGetters([
+      'isLogin'
+    ]),
+
+    loginClass () {
+      return ['login', this.$route.path === '/auth/login' ? 'active' : '']
+    },
+
+    registerClass () {
+      return ['register', this.$route.path === '/auth/register' ? 'active' : '']
+    },
+
+    activeIndex () {
+      for (const i of this.itemList.slice(1)) {
+        if (this.$route.path === i.url) { return this.$route.path }
+      }
+      return ''
+    }
+  },
+  methods: {
+    ...mapActions([
+      'checkLogin'
+    ]),
+
+    handleSelect (url) {
+      if (url !== '') { this.$router.push(url) }
+    },
+
+    async onEnterSearch () {
+      console.log(this.searchInput)
+      // const result = await utils.globalSearch(this.searchInput)
+      // console.log(result)
+    },
+
+    getNotification () {
+      this.$router.push({ path: '/notification' })
     }
   }
 }
