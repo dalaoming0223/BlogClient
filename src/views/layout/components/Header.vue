@@ -1,79 +1,78 @@
 <template>
   <header>
-    <router-link to="/" class="title">My Blog</router-link>
+    <router-link to="/" class="title">Ming</router-link>
     <div class="nav">
-
       <div class="nav-left">
         <el-menu
-        ref="menu"
-        :default-active="activeIndex"
-        class="el-menu-demo"
-        background-color="#fff"
-        mode="horizontal"
-        style="border-bottom:0"
-        @select="handleSelect"
-        >
-          <el-menu-item v-for="item in itemList" :key="item.title">
+          ref="'menu"
+          :default-active="activeIndex"
+          class="el-menu-demo"
+          background-color="#fff"
+          mode="horizontal"
+          style="border-bottom:0"
+          @select="handleSelect">
+          <el-menu-item v-show="index>0" v-for="(item, index) in itemList" :index="item.url" :key="index">
             {{item.title}}
           </el-menu-item>
         </el-menu>
       </div>
-
       <div class="nav-middle">
         <el-input
-        v-model="searchInput"
-        clearable
-        placeholder="搜索内容"
-        @keyup.enter.native="onEnterSearch"
-        prefix-icon="el-icon-search"
-        >
-        </el-input>
+          v-model="searchInput"
+          clearable
+          placeholder="搜索内容"
+          @keyup.enter.native="onEnterSearch"
+          prefix-icon="el-icon-search"></el-input>
       </div>
       <template v-if="!isLogin">
         <div class="nav-right">
-          <router-link to="/auth/register">
+          <router-link to="/auth/login">
             <span :class="loginClass">登录</span>
           </router-link>
           <span style="padding: 3px">/</span>
-          <router-link to="/auth/login">
+          <router-link to="/auth/register">
             <span :class="registerClass">注册</span>
           </router-link>
         </div>
       </template>
-
       <template v-if="isLogin">
         <div class="nav-right">
           <el-button type="mini" class="nav-icon notification" @click="getNotification">
             <i class="el-icon-message-solid" style="font-size: 20px;"></i>
           </el-button>
           <v-user/>
+
         </div>
       </template>
-
     </div>
   </header>
 </template>
 
+
 <script>
-// import auth from '@/api/auth'
-import vUser from './user_tool'
-import { mapGetters, mapActions } from 'vuex'
+import auth from '@/api/auth'
+import utils from '@/api/utils'
+import vUser from "./user_tool";
+
+window.auth = auth
+import {mapGetters, mapActions} from 'vuex'
+
 export default {
   components: {
     vUser
   },
-  data () {
+  data() {
     return {
-      serchInput: '',
+      searchInput: '',
       itemList: [
-        { title: '', url: '' },
-        { title: '首页', url: '/index' },
-        { title: '社区', url: '/post/index' },
-        { title: '写文章', url: '/editor/drafts/new' }
+        {title: '', url: ''},
+        {title: '首页', url: '/index'},
+        {title: '社区', url: '/post/index'},
+        {title: '写文章', url: '/editor/drafts/new'},
       ]
     }
   },
-  created () {
+  created() {
     this.checkLogin()
   },
   computed: {
@@ -81,38 +80,40 @@ export default {
       'isLogin'
     ]),
 
-    loginClass () {
+    loginClass() {
       return ['login', this.$route.path === '/auth/login' ? 'active' : '']
     },
 
-    registerClass () {
+    registerClass() {
       return ['register', this.$route.path === '/auth/register' ? 'active' : '']
     },
 
-    activeIndex () {
-      for (const i of this.itemList.slice(1)) {
-        if (this.$route.path === i.url) { return this.$route.path }
+    activeIndex() {
+      for (let i of this.itemList.slice(1)) {
+        if (this.$route.path === i.url)
+          return this.$route.path
       }
       return ''
     }
   },
+
   methods: {
     ...mapActions([
       'checkLogin'
     ]),
-
-    handleSelect (url) {
-      if (url !== '') { this.$router.push(url) }
+    handleSelect(url) {
+      if (url !== '')
+        this.$router.push(url)
     },
 
-    async onEnterSearch () {
-      console.log(this.searchInput)
-      // const result = await utils.globalSearch(this.searchInput)
-      // console.log(result)
+    async onEnterSearch() {
+      // console.log(this.searchInput)
+      let result = await utils.globalSearch(this.searchInput)
+      console.log(result)
     },
 
-    getNotification () {
-      this.$router.push({ path: '/notification' })
+    getNotification() {
+      this.$router.push({path: '/notification'})
     }
   }
 }
@@ -190,3 +191,4 @@ export default {
     }
   }
 </style>
+

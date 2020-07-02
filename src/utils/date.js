@@ -1,39 +1,20 @@
-function switchTime (val = +new Date(), dateType = 'YYYY-MM-DD hh:mm:ss') {
-  // 将字符串转换成数字
-  const timeStamp = +new Date(val)
-
-  // 如果转换成数字出错
-  if (!timeStamp) {
-    return val
-  }
-  let str
-  // 得到时间字符串
-  const dateStr = new Date(timeStamp)
-  str = dateType.replace('YYYY', dateStr.getFullYear())
-  str = str.replace('MM', (dateStr.getMonth() + 1 < 10 ? '0' : '') + (dateStr.getMonth() + 1))
-  str = str.replace('DD', (dateStr.getDate() < 10 ? '0' : '') + dateStr.getDate())
-  str = str.replace('hh', (dateStr.getHours() < 10 ? '0' : '') + dateStr.getHours())
-  str = str.replace('mm', (dateStr.getMinutes() < 10 ? '0' : '') + dateStr.getMinutes())
-  str = str.replace('ss', (dateStr.getSeconds() < 10 ? '0' : '') + dateStr.getSeconds())
-
-  return str
-}
-
 /**
  * 时间显示
  */
-function friendlyDate (val) {
-  const time = typeof val === 'object' ? +val : +new Date(val)
+import {switchTime} from "./index"
 
-  const now = +new Date()
+function friendlyDate(val) {
+  let time = typeof val === 'object' ? +val : +new Date(val)
 
-  const space = now - time
+  let now = +new Date()
+
+  let space = now - time
 
   let str = ''
   const MIN = 60 * 1000 // 一分钟的毫秒数
   const HOUR = 60 * 60 * 1000 // 一小时的毫秒数
   const DAY = 60 * 60 * 1000 * 24 // 一天的毫秒数
-  const WEEK = 60 * 60 * 1000 * 24 * 7 // 一周的毫秒数
+  const WEEK = 60 * 60 * 1000 * 24 * 7 //一周的毫秒数
 
   switch (true) {
     case space < MIN:
@@ -47,7 +28,7 @@ function friendlyDate (val) {
       break
     case space < WEEK:
       str = Math.floor(space / DAY) + '天前'
-      break
+      break;
     default:
       if (switchTime(now, 'YYYY') === switchTime(time, 'YYYY')) {
         str = switchTime(time, 'MM月DD日')
@@ -58,9 +39,10 @@ function friendlyDate (val) {
   return str
 }
 
-/* eslint-disable no-new */
+/* eslint-disable */
 export default {
-  install (Vue, options) {
+  install(Vue, options) {
     Vue.prototype.friendlyDate = friendlyDate
   }
 }
+/* eslint-disable */

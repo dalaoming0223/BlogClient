@@ -1,26 +1,27 @@
-import request from './request'
+import request from '@/utils/request'
 
 const URL = {
-  REGISTER: '/user/register',
-  LOGIN: '/user/login',
-  LOGOUT: '/user/logout',
-  GET_INFO: '/user/info'
+  REGISTER: '/api/auth/register',
+  LOGIN: '/api/auth/login',
+  LOGOUT: '/api/auth/logout',
+  GET_INFO: '/api/auth/info'
 }
 
 export default {
-  register ({ username, password, email }) {
-    return request(URL.REGISTER, 'POST', { username, password, email })
+  register({username, password,email}) {
+    // console.log(email)
+    return request(URL.REGISTER, 'POST', {username, password, email})
   },
 
-  login ({ username, password }) {
-    return request(URL.LOGIN, 'POST', { username, password })
+  login({username, password}) {
+    return request(URL.LOGIN, 'POST', {username, password})
   },
 
-  logout () {
+  logout() {
     return request(URL.LOGOUT, 'POST')
   },
 
-  getInfo () {
+  getInfo() {
     return request(URL.GET_INFO, 'POST')
   }
 }

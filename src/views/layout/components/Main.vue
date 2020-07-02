@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'vMain'
+  name: "vMain"
 }
 </script>
 
@@ -15,5 +15,7 @@ export default {
   .page-main {
     background-color: @bgColor;
   }
+
+
 
 </style>

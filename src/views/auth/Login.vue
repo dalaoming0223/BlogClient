@@ -2,7 +2,9 @@
   <div id="login">
     <div class="login-box">
       <h4>用户名</h4>
+
       <p><input v-model="username" placeholder="用户名"></p>
+
       <h4>密码</h4>
       <p><input v-model="password" type="password" placeholder="密码" @keyup.enter="onLogin"></p>
 
@@ -15,13 +17,39 @@
 </template>
 
 <script>
-export default {
+import {mapActions} from 'vuex'
 
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+
+  methods: {
+    ...mapActions(['login']),
+
+    async onLogin() {
+      try {
+        await this.login({username: this.username, password: this.password})
+        this.$message.success({
+          duration: 1500,
+          message: "登录成功"
+        })
+        this.$router.push({path: this.$route.query.redirect || '/'})
+      }
+      catch (err) {
+        this.$message.error('账号或密码错误')
+      }
+    }
+  }
 }
+
 </script>
 
 <style scoped lang="less">
-@import 'common.less';
+  @import 'common.less';
 
   #login {
     height: 100%;
@@ -30,4 +58,5 @@ export default {
     justify-content: center;
     align-items: center;
   }
+
 </style>

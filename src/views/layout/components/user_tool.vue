@@ -23,19 +23,20 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import {mapActions} from 'vuex'
 
 export default {
+
 
   methods: {
     ...mapActions([
       'logout'
     ]),
 
-    onLogout () {
+    onLogout() {
       this.logout()
-      this.$router.push({ path: '/' })
-    }
+      this.$router.push({path: '/'})
+    },
   }
 }
 </script>

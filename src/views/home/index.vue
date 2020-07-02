@@ -1,6 +1,5 @@
 <template>
   <div class="index">
-
     <section class="left-blogs">
       <div class="item">
         <span class="blog-sort">热门</span>
@@ -13,23 +12,26 @@
           <div v-if="blog.tags.length > 0">
             <span v-for="tag in blog.tags" :key="tag.id">{{tag.name}}</span>
           </div>
-          <div>{{friendlyDate(blog.created_at)}}</div>
+          <div> {{friendlyDate(blog.created_at)}}</div>
+          <div class=""></div>
         </div>
+
       </router-link>
       <el-pagination
-        background
-        v-if="pageCount>0"
+       background
+        v-if="pageCount>1"
         layout="prev, pager, next"
         :total="total"
         :page-count="pageCount"
         :current-page="page"
-        @current-change="onPageChange"
-        >
+        @current-change="onPageChange">
       </el-pagination>
-    </section>
 
+    </section>
     <section class="right-nav">
       <div class="right-nav-top">热门标签</div>
+
+
       <div class="right-tags">
         <el-button
           type="text"
@@ -39,10 +41,12 @@
           @click="getBlogsByFilter(item.id)"
           plain
         >
-          {{item.name}}
+          {{ item.name }}
         </el-button>
       </div>
+
     </section>
+
   </div>
 </template>
 
@@ -51,60 +55,57 @@ import blog from '@/api/blog.js'
 import tag from '@/api/tag.js'
 
 export default {
-  data () {
+  data() {
     return {
       blogs: [],
-      tagList: [],
-      filterTags: [],
+      total: 0,
       page: 1,
       pageCount: 0,
       sortBy: 'updated_at',
-      total: 0
+      tagList: [],
+      filterTags: [],
     }
   },
-  created () {
-    console.log('this.$route.query.page', this.$route.query.page)
+  created() {
     this.page = parseInt(this.$route.query.page) || 1
-    this.getTags()
     this.getBlogsByFilter(this.filterTags)
+    this.getTags()
   },
   methods: {
-    onPageChange (newPage) {
-      blog.getBlogs({ page: newPage }).then(res => {
+    onPageChange(newPage) {
+      blog.getBlogs({page: newPage}).then(res => {
         this.blogs = res.data
         this.total = res.total
         this.page = res.page
-        this.$router.push({ path: '/', query: { page: newPage } })
+        this.$router.push({path: '/', query: {page: newPage}})
       })
     },
-    getTags () {
-      tag.getTags().then(res => {
-        this.tagList = res.data
-        console.log(res.data)
-      }
-      )
-    },
-    getBlogsByFilter (tag_id = []) {
-      blog.getBlogs({ page: this.page, sortBy: this.sortBy, tag: tag_id }).then(res => {
-        console.log('blogs:', res)
+    getBlogsByFilter(tag_id = []) {
+      blog.getBlogs({page: this.page, sortBy: this.sortBy, tag: tag_id}).then(res => {
+        console.log(res)
         this.blogs = res.data
         this.total = res.total
         this.page = res.page
         this.pageCount = res.pageCount
       })
+    },
+    getTags() {
+      tag.getTags().then(res => {
+        this.tagList = res.data
+      })
     }
   }
 }
+
 </script>
 
-<style lang="less">
-    @import "~@/assets/base.less";
+<style scoped lang="less">
+  @import "~@/assets/base.less";
 
-.index {
-    //网格布局
+  .index {
     padding: 0 15%;
     display: grid;
-    grid-template-columns: 1fr 27%; //左右
+    grid-template-columns: 1fr 27%;
 
     h3 {
       margin: 5px 0;
@@ -134,24 +135,44 @@ export default {
         padding: 12px;
         margin: 0 0 1px;
         border: 1px solid #efefef;
+        border-bottom: 0;
       }
 
       .blog-sort {
         background-color: #fff;
         padding-right: 20px;
         cursor: pointer;
-      }
 
+      }
       .blog-item :hover {
         background-color: #efefef;
       }
+      //.avatar {
+      //  grid-column: 1;
+      //  grid-row: 1 / span 2;
+      //  justify-self: center;
+      //  margin-left: 0;
+      //  text-align: center;
+      //
+      //  img {
+      //    width: 60px;
+      //    height: 60px;
+      //    border-radius: 50%;
+      //  }
+      //
+      //  figcaption {
+      //    font-size: 12px;
+      //    color: @textLighterColor;
+      //  }
+      //}
+
     }
 
     .right-nav {
       grid-column: 2;
       grid-row: 1;
 
-      margin:30px 6%;
+      margin: 30px 6%;
       background-color: #fff;
       box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
       border-radius: 3px;
@@ -168,14 +189,12 @@ export default {
 
       .right-tags {
         margin: 0 10px;
-
         .el-button {
           color: #999;
           :hover, :active {
             color: #2dc1c2;
           }
         }
-
         .tag-item {
           cursor: pointer;
           margin: 10px 8px;
@@ -183,11 +202,14 @@ export default {
           border-radius: 3px;
           border: 0;
           font-size: 18px;
+
         }
       }
 
     }
-
+    //p {
+    //  padding-bottom: 20px;
+    //}
   }
 
   .el-pagination .el-pager li,

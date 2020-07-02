@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import {mapActions} from 'vuex'
 
 export default {
-  data () {
+  data() {
     return {
       username: '',
       email: '',
@@ -33,18 +33,17 @@ export default {
   methods: {
     ...mapActions(['register']),
 
-    onRegister () {
-      this.register({ username: this.username, password: this.password, email: this.email })
+    onRegister() {
+      this.register({username: this.username, password: this.password, email: this.email})
         .then(() => {
           this.$message.success({
             duration: 1500,
-            message: '注册成功'
+            message: "注册成功"
           })
-          this.$router.push({ path: '/' })
+          this.$router.push({path: '/'})
         })
-        .catch((err) => {
-          console.log('注册页面error：', err)
-          this.$message.error('注册失败:' + err)
+        .catch(() => {
+          this.$message.error("注册失败")
         })
     }
   }

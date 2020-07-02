@@ -1,9 +1,10 @@
 <template>
   <footer>
-    <a class="a-left" href="http://blog.studalaoming.club">我的blog</a>
-    <a class="a-right" href="http://blog.studalaoming.club">我的blog</a>
+    <a class="a-left" href="http://blog.studalaoming.club">http://blog.studalaoming.club</a>
+    <a class="a-right" href="http://blog.studalaoming.club">http://blog.studalaoming.club</a>
   </footer>
 </template>
+
 
 <style scoped>
   footer {
